@@ -8,17 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */; };
-		49B661CD2B5F523C00C161FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661CC2B5F523C00C161FF /* ContentView.swift */; };
 		49B661CF2B5F523D00C161FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B661CE2B5F523D00C161FF /* Assets.xcassets */; };
 		49B661D22B5F523D00C161FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B661D12B5F523D00C161FF /* Preview Assets.xcassets */; };
+		49B661D92B60758F00C161FF /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661D82B60758F00C161FF /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		49B661C72B5F523C00C161FF /* Archangel Raphael.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Archangel Raphael.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archangel_RaphaelApp.swift; sourceTree = "<group>"; };
-		49B661CC2B5F523C00C161FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49B661CE2B5F523D00C161FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49B661D12B5F523D00C161FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49B661D82B60758F00C161FF /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		49B661DB2B60789000C161FF /* Literata-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-BlackItalic.ttf"; sourceTree = "<group>"; };
+		49B661DC2B60789000C161FF /* Literata-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-LightItalic.ttf"; sourceTree = "<group>"; };
+		49B661DD2B60789100C161FF /* Literata-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-Italic.ttf"; sourceTree = "<group>"; };
+		49B661DE2B60789100C161FF /* Literata-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		49B661DF2B60789100C161FF /* Literata-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-MediumItalic.ttf"; sourceTree = "<group>"; };
+		49B661E02B60789100C161FF /* Literata-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-BoldItalic.ttf"; sourceTree = "<group>"; };
+		49B661E12B60789100C161FF /* Literata-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		49B661E22B60789100C161FF /* Literata-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		49B661E32B60789F00C161FF /* Literata-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-Medium.ttf"; sourceTree = "<group>"; };
+		49B661E42B60789F00C161FF /* Literata-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-Bold.ttf"; sourceTree = "<group>"; };
+		49B661E52B60789F00C161FF /* Literata-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-ExtraLight.ttf"; sourceTree = "<group>"; };
+		49B661E62B60789F00C161FF /* Literata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-Regular.ttf"; sourceTree = "<group>"; };
+		49B661E72B60789F00C161FF /* Literata-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-Black.ttf"; sourceTree = "<group>"; };
+		49B661E82B60789F00C161FF /* Literata-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-Light.ttf"; sourceTree = "<group>"; };
+		49B661E92B60789F00C161FF /* Literata-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-SemiBold.ttf"; sourceTree = "<group>"; };
+		49B661EA2B60789F00C161FF /* Literata-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-ExtraBold.ttf"; sourceTree = "<group>"; };
+		49B661EB2B6078AF00C161FF /* Archangel-Raphael-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Archangel-Raphael-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +68,10 @@
 		49B661C92B5F523C00C161FF /* Archangel Raphael */ = {
 			isa = PBXGroup;
 			children = (
+				49B661EB2B6078AF00C161FF /* Archangel-Raphael-Info.plist */,
+				49B661DA2B6077C800C161FF /* Fonts */,
 				49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */,
-				49B661CC2B5F523C00C161FF /* ContentView.swift */,
+				49B661D82B60758F00C161FF /* HomePage.swift */,
 				49B661CE2B5F523D00C161FF /* Assets.xcassets */,
 				49B661D02B5F523D00C161FF /* Preview Content */,
 			);
@@ -65,6 +84,29 @@
 				49B661D12B5F523D00C161FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49B661DA2B6077C800C161FF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				49B661DB2B60789000C161FF /* Literata-BlackItalic.ttf */,
+				49B661E02B60789100C161FF /* Literata-BoldItalic.ttf */,
+				49B661DE2B60789100C161FF /* Literata-ExtraBoldItalic.ttf */,
+				49B661E22B60789100C161FF /* Literata-ExtraLightItalic.ttf */,
+				49B661DD2B60789100C161FF /* Literata-Italic.ttf */,
+				49B661DC2B60789000C161FF /* Literata-LightItalic.ttf */,
+				49B661DF2B60789100C161FF /* Literata-MediumItalic.ttf */,
+				49B661E12B60789100C161FF /* Literata-SemiBoldItalic.ttf */,
+				49B661E72B60789F00C161FF /* Literata-Black.ttf */,
+				49B661E42B60789F00C161FF /* Literata-Bold.ttf */,
+				49B661EA2B60789F00C161FF /* Literata-ExtraBold.ttf */,
+				49B661E52B60789F00C161FF /* Literata-ExtraLight.ttf */,
+				49B661E82B60789F00C161FF /* Literata-Light.ttf */,
+				49B661E32B60789F00C161FF /* Literata-Medium.ttf */,
+				49B661E62B60789F00C161FF /* Literata-Regular.ttf */,
+				49B661E92B60789F00C161FF /* Literata-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49B661CD2B5F523C00C161FF /* ContentView.swift in Sources */,
+				49B661D92B60758F00C161FF /* HomePage.swift in Sources */,
 				49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +317,7 @@
 				DEVELOPMENT_TEAM = 99G82434DT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Archangel-Raphael-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +347,7 @@
 				DEVELOPMENT_TEAM = 99G82434DT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Archangel-Raphael-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

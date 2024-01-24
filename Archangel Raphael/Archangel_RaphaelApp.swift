@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Archangel_RaphaelApp: App {
+    @AppStorage("isLight") var isLight: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePage()
         }
     }
 }
