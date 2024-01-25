@@ -72,7 +72,7 @@ struct HomePage: View {
                             Text(splitBibleVerse(bibleVerse: bibleVerse)[1])
                             Spacer()
                         }
-                        .font(.custom("Literata-Medium", size: 14))
+                        .font(.custom("Literata-Medium", size: 11))
                         .multilineTextAlignment(.leading)
                         .padding(.leading, 20)
                         
