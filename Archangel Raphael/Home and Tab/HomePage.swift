@@ -92,9 +92,24 @@ struct HomePage: View {
                     
                     Spacer()
                 }
-                .onAppear{
-                    print(proxy.size.height)
+                
+                VStack(spacing: proxy.size.height * 38 / 839){
+                    HStack{
+                        Spacer()
+                        HomeButton(name: "Broadcast", size: proxy.size.height * 170/839)
+                        Spacer()
+                        HomeButton(name: "Calendar", size: proxy.size.height * 170/839)
+                        Spacer()
+                    }
+                    HStack{
+                        Spacer()
+                        HomeButton(name: "Bible Study", size: proxy.size.height * 170/839)
+                        Spacer()
+                        HomeButton(name: "Donations", size: proxy.size.height * 170/839)
+                        Spacer()
+                    }
                 }
+                .padding(.top, proxy.size.height * 48 / 839)
             }
 
         }
@@ -104,9 +119,7 @@ struct HomePage: View {
                            startPoint: .bottom,
                            endPoint: .top)
         )
-        .onAppear{
-            print(splitBibleVerse(bibleVerse: bibleVerse))
-        }
+        
     
     }
 }
