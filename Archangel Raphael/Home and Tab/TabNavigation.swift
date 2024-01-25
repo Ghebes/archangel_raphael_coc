@@ -58,11 +58,30 @@ struct TabNavigation: View {
                     HStack{
                         Spacer()
                         
-                        HStack(spacing: proxy.size.width  * 45/430){
+                        HStack(spacing: proxy.size.width  * 50/430){
                             ForEach(Tab.allCases, id: \.rawValue){tab in
-                                Image(systemName: imageForTab(currentTab: tab))
-                                    .resizable()
-                                    .frame(width: 23, height: 23)
+                                
+                                ZStack{
+                                    if(currentTab == tab){
+                                        Circle()
+                                            .fill(.lightblue.opacity(0.9))
+                                            .frame(width: 60, height: 60)
+                                            .offset(y: -8)
+                                            .shadow(radius: 4)
+                                    }
+                                    Image(systemName: imageForTab(currentTab: tab))
+                                        .resizable()
+                                        .frame(width: 25, height: 25)
+                                        .offset(y: currentTab == tab ? -8 : 0)
+                                        .foregroundStyle(currentTab == tab ? .white : .black)
+                                    
+                                    
+                                }
+                                .onTapGesture{
+                                    withAnimation(.spring()){
+                                        currentTab = tab
+                                    }
+                                }
                             }
                         }
                         .frame(width: proxy.size.width * 400/430, height: proxy.size.height * 91 / 839)
