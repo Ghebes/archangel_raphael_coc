@@ -11,6 +11,7 @@
 		49B661CF2B5F523D00C161FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B661CE2B5F523D00C161FF /* Assets.xcassets */; };
 		49B661D22B5F523D00C161FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B661D12B5F523D00C161FF /* Preview Assets.xcassets */; };
 		49B661D92B60758F00C161FF /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661D82B60758F00C161FF /* HomePage.swift */; };
+		49B661ED2B61E07B00C161FF /* BibleVerses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661EC2B61E07B00C161FF /* BibleVerses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		49B661E92B60789F00C161FF /* Literata-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-SemiBold.ttf"; sourceTree = "<group>"; };
 		49B661EA2B60789F00C161FF /* Literata-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Literata-ExtraBold.ttf"; sourceTree = "<group>"; };
 		49B661EB2B6078AF00C161FF /* Archangel-Raphael-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Archangel-Raphael-Info.plist"; sourceTree = SOURCE_ROOT; };
+		49B661EC2B61E07B00C161FF /* BibleVerses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVerses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				49B661D82B60758F00C161FF /* HomePage.swift */,
 				49B661CE2B5F523D00C161FF /* Assets.xcassets */,
 				49B661D02B5F523D00C161FF /* Preview Content */,
+				49B661EC2B61E07B00C161FF /* BibleVerses.swift */,
 			);
 			path = "Archangel Raphael";
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B661ED2B61E07B00C161FF /* BibleVerses.swift in Sources */,
 				49B661D92B60758F00C161FF /* HomePage.swift in Sources */,
 				49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */,
 			);

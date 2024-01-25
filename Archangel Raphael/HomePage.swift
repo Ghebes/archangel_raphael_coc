@@ -19,9 +19,30 @@ struct HomePage: View {
         }
     }
     
+    ///Variable that holds the current Bible verse for each day by calculating the difference in days
+    var bibleVerse: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/mm/yyyy"
+        
+        let newYearString = "01/01/2024"
+        guard let newYearDate = dateFormatter.date(from: newYearString) else {
+            return "Error in Deploying a Bible Verse"
+        }
+        
+        let hoursApart = Date().timeIntervalSince(newYearDate) / 3600 / 24
+        
+        let daysApart = Int(hoursApart.truncatingRemainder(dividingBy: 365))
+
+        return bibleVerses[daysApart]
+    }
+    ///Function that helps split the bible verse into the reference and the actual verse
+    func splitBibleVerse(bibleVerse: String) -> [String]{
+        return bibleVerse.components(separatedBy: " - ")
+    }
+    
     var body: some View {
         GeometryReader {proxy in
-            VStack{
+            VStack(spacing: 0){
                 HStack{
                     Spacer()
                     
@@ -43,11 +64,26 @@ struct HomePage: View {
                                 .foregroundStyle(isLight ? .textGray : .coral)
                             Spacer()
                         }
-                        .padding([.leading, .top], 10)
+                        .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
                         
                         Spacer()
                         
+                        HStack{
+                            Text(splitBibleVerse(bibleVerse: bibleVerse)[1])
+                            Spacer()
+                        }
+                        .font(.custom("Literata-Medium", size: 14))
+                        .multilineTextAlignment(.leading)
+                        .padding(.leading, 20)
                         
+                        Spacer()
+                        
+                        HStack{
+                            Text(splitBibleVerse(bibleVerse: bibleVerse)[0])
+                            Spacer()
+                        }
+                        .font(.custom("Literata-Bold", size: 14))
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 0))
                     }
                     .frame(width: proxy.size.width * 351 / 430, height: proxy.size.height * 177 / 839)
                     .background(isLight ? .white: .lightgray)
@@ -68,6 +104,9 @@ struct HomePage: View {
                            startPoint: .bottom,
                            endPoint: .top)
         )
+        .onAppear{
+            print(splitBibleVerse(bibleVerse: bibleVerse))
+        }
     
     }
 }
