@@ -93,7 +93,7 @@ struct TabNavigation: View {
                     }
                 }
                 .onAppear{
-                    print(proxy.size.height)
+                    print("CHECKING GITHUB")
                 }
             }
         }
