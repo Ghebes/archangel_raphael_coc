@@ -93,7 +93,7 @@ struct TabNavigation: View {
                     }
                 }
                 .onAppear{
-                    print("CHECKING GITHUB")
+                    print("CHECKING GIT")
                 }
             }
         }
