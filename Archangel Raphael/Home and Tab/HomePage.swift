@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct HomePage: View {
-    @AppStorage("isLight") var isLight: Bool = false
+    @AppStorage("isLight") var isLight: Bool = true
 
+    ///Variable to change the screens
+    @StateObject var navigationValues: NavigationValues
     
     ///Variable that holds the current Bible verse for each day by calculating the difference in days
     var bibleVerse: String {
@@ -33,6 +35,7 @@ struct HomePage: View {
     }
     
     var body: some View {
+        
         GeometryReader {proxy in
             VStack(spacing: 0){
                 HStack{
@@ -89,11 +92,11 @@ struct HomePage: View {
                 VStack(spacing: proxy.size.height * 38 / 839){
                     HStack{
                         Spacer()
-                        NavigationLink{
-                            BroadcastView()
-                        }label: {
-                            HomeButton(name: "Broadcast", size: proxy.size.height * 170/839)
-                        }
+                        HomeButton(name: "Broadcast", size: proxy.size.height * 170/839)
+                            .onTapGesture {
+                                navigationValues.currentAppScreen = 1
+                            }
+                        
                         Spacer()
                         HomeButton(name: "Calendar", size: proxy.size.height * 170/839)
                         Spacer()
@@ -121,5 +124,5 @@ struct HomePage: View {
 }
 
 #Preview {
-    HomePage()
+    HomePage(navigationValues: NavigationValues())
 }

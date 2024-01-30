@@ -13,7 +13,7 @@ struct Archangel_RaphaelApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomePage()
+            TabNavigation()
         }
     }
 }

@@ -10,7 +10,10 @@ import SwiftUI
 struct BroadcastView: View {
     ///Environment Variable that opens url links
     @Environment(\.openURL) var openURL
+    @Environment(\.dismiss) var dismiss: DismissAction
     @AppStorage("isLight") var isLight: Bool = true
+    
+    @StateObject var navigationValues : NavigationValues = NavigationValues()
     
     var body: some View {
         GeometryReader{ proxy in
@@ -22,12 +25,15 @@ struct BroadcastView: View {
                         .resizable()
                         .frame(width: 32, height: 28)
                         .foregroundStyle(isLight ? .churchOrange : .coral)
+                        .onTapGesture {
+                            navigationValues.currentAppScreen = 0
+                        }
                     
                     
                     Text("Broadcast")
                         .foregroundStyle(isLight ? .churchOrange : .coral)
                         .font(.custom("Literata-Bold", size: 32))
-                        .padding(.leading, proxy.size.width * 60 / 430)
+                        .padding(.leading, proxy.size.width * 50 / 430)
                     
                     Spacer()
                     
@@ -47,7 +53,7 @@ struct BroadcastView: View {
                     .frame(width: proxy.size.width * 348/430, height: proxy.size.height * 404/839)
                     .background(.black)
                     .cornerRadius(30)
-                    .padding(.init(top: proxy.size.height * 80 / 839, leading: 0, bottom: 0, trailing: 0))
+                    .padding(.init(top: proxy.size.height * 40 / 839, leading: 0, bottom: 0, trailing: 0))
                     
                     
                     Spacer()
@@ -83,12 +89,12 @@ struct BroadcastView: View {
                 
             }
         }
-        .frame(width: .infinity, height: .infinity)
         .background(
             LinearGradient(colors: backgroundColors(isLight: isLight),
                            startPoint: .bottom,
                            endPoint: .top)
         )
+        .navigationBarBackButtonHidden()
     }
 }
 

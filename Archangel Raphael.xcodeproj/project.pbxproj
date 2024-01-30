@@ -16,6 +16,7 @@
 		49B661ED2B61E07B00C161FF /* BibleVerses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661EC2B61E07B00C161FF /* BibleVerses.swift */; };
 		49B661EF2B61E89600C161FF /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661EE2B61E89600C161FF /* HomeButton.swift */; };
 		49B661F22B62E24700C161FF /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661F12B62E24700C161FF /* TabNavigation.swift */; };
+		49C686F22B69B2FE0060A09A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C686F12B69B2FE0060A09A /* AppNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		49B661EC2B61E07B00C161FF /* BibleVerses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleVerses.swift; sourceTree = "<group>"; };
 		49B661EE2B61E89600C161FF /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		49B661F12B62E24700C161FF /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
+		49C686F12B69B2FE0060A09A /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				49B661D82B60758F00C161FF /* HomePage.swift */,
 				49B661EE2B61E89600C161FF /* HomeButton.swift */,
 				49B661F12B62E24700C161FF /* TabNavigation.swift */,
+				49C686F12B69B2FE0060A09A /* AppNavigation.swift */,
 			);
 			path = "Home and Tab";
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				49B661F22B62E24700C161FF /* TabNavigation.swift in Sources */,
 				49B661D92B60758F00C161FF /* HomePage.swift in Sources */,
 				49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */,
+				49C686F22B69B2FE0060A09A /* AppNavigation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

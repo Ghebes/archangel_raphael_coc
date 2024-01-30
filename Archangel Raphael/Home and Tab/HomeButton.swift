@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeButton: View {
-    @AppStorage("isLight") var isLight: Bool = false
+    @AppStorage("isLight") var isLight: Bool = true
     @State var name: String = "Broadcast"
     @State var size: CGFloat = 170
     @State var imageDimensions: [CGFloat] = [35, 30]
@@ -28,6 +28,7 @@ struct HomeButton: View {
         }
     }
     
+
     var body: some View {
         VStack(spacing: size * 5 / 170){
             Image(systemName: iconName())
@@ -38,13 +39,15 @@ struct HomeButton: View {
             
             Text(name)
                 .foregroundStyle(isLight ? .black : .coral)
-                .font(.custom("Literata-Bold", size: 24))
+                .font(.custom("Literata-Bold", size: 21))
                 
         }
         .frame(width: size, height: size)
         .background(isLight ? .whiteBlue : .mediumGray)
         .cornerRadius(20)
         .shadow(radius: 20)
+
+        
     }
 }
 
