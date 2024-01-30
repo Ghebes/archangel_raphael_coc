@@ -19,7 +19,7 @@ struct TabNavigation: View {
     ///Variable that determines which screen is displayed from the tab bar
     @State var currentTab: Tab = .home
     
-    @AppStorage("isLight") var isLight: Bool = true
+    @AppStorage("isLight") var isLight: Bool = false
     
     ///Function that returns the image names for each of the tabs
     func imageForTab(currentTab: Tab) -> String{
@@ -58,30 +58,27 @@ struct TabNavigation: View {
                     HStack{
                         Spacer()
                         
-                        HStack(spacing: proxy.size.width  * 50/430){
+                        
+                        HStack(spacing: proxy.size.width  * 10/430){
+                            
                             ForEach(Tab.allCases, id: \.rawValue){tab in
                                 
-                                ZStack{
-                                    if(currentTab == tab){
-                                        Circle()
-                                            .fill(.lightblue.opacity(0.9))
-                                            .frame(width: 60, height: 60)
-                                            .offset(y: -8)
-                                            .shadow(radius: 4)
+                                Circle()
+                                    .fill(currentTab == tab ? isLight ? .lightblue.opacity(0.8) : .coral.opacity(0.9) : .clear)
+                                    .frame(width: 60, height: 60)
+                                    .offset(y: -8)
+                                    .overlay{
+                                        Image(systemName: imageForTab(currentTab: tab))
+                                            .resizable()
+                                            .frame(width: 25, height: 25)
+                                            .offset(y: currentTab == tab ? -8 : 0)
+                                            .foregroundStyle(currentTab == tab || isLight == false ? .white : .black)
+                                            .onTapGesture{
+                                                withAnimation(.smooth){
+                                                    currentTab = tab
+                                                }
+                                            }
                                     }
-                                    Image(systemName: imageForTab(currentTab: tab))
-                                        .resizable()
-                                        .frame(width: 25, height: 25)
-                                        .offset(y: currentTab == tab ? -8 : 0)
-                                        .foregroundStyle(currentTab == tab ? .white : .black)
-                                    
-                                    
-                                }
-                                .onTapGesture{
-                                    withAnimation(.spring()){
-                                        currentTab = tab
-                                    }
-                                }
                             }
                         }
                         .frame(width: proxy.size.width * 400/430, height: proxy.size.height * 91 / 839)
@@ -89,11 +86,9 @@ struct TabNavigation: View {
                         .cornerRadius(20)
                         .padding(.bottom, 6)
                         
+                        
                         Spacer()
                     }
-                }
-                .onAppear{
-                    print("CHECKING GIT")
                 }
             }
         }

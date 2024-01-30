@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePage: View {
-    @AppStorage("isLight") var isLight: Bool = true
+    @AppStorage("isLight") var isLight: Bool = false
     
     ///Background colors chosen based on the App Storage object isLight
     var backgroundColors: [Color] {
@@ -61,7 +61,7 @@ struct HomePage: View {
                         HStack{
                             Text("Verse of the Day")
                                 .font(.custom("Literata-Bold", size: 24))
-                                .foregroundStyle(isLight ? .textGray : .coral)
+                               
                             Spacer()
                         }
                         .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
@@ -72,7 +72,7 @@ struct HomePage: View {
                             Text(splitBibleVerse(bibleVerse: bibleVerse)[1])
                             Spacer()
                         }
-                        .font(.custom("Literata-Medium", size: 11))
+                        .font(.custom("Literata-Medium", size: 12))
                         .multilineTextAlignment(.leading)
                         .padding(.leading, 20)
                         
@@ -89,6 +89,7 @@ struct HomePage: View {
                     .background(isLight ? .white: .lightgray)
                     .cornerRadius(20)
                     .padding(.top, proxy.size.height * 28 / 839)
+                    .foregroundStyle(isLight ? .textGray : .coral)
                     
                     Spacer()
                 }
