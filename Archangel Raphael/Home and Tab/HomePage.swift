@@ -9,15 +9,7 @@ import SwiftUI
 
 struct HomePage: View {
     @AppStorage("isLight") var isLight: Bool = false
-    
-    ///Background colors chosen based on the App Storage object isLight
-    var backgroundColors: [Color] {
-        if isLight{
-            return [Color("lightblue"), Color("lightblue").opacity(0.05)]
-        }else{
-            return [Color("darkgray")]
-        }
-    }
+
     
     ///Variable that holds the current Bible verse for each day by calculating the difference in days
     var bibleVerse: String {
@@ -97,7 +89,11 @@ struct HomePage: View {
                 VStack(spacing: proxy.size.height * 38 / 839){
                     HStack{
                         Spacer()
-                        HomeButton(name: "Broadcast", size: proxy.size.height * 170/839)
+                        NavigationLink{
+                            BroadcastView()
+                        }label: {
+                            HomeButton(name: "Broadcast", size: proxy.size.height * 170/839)
+                        }
                         Spacer()
                         HomeButton(name: "Calendar", size: proxy.size.height * 170/839)
                         Spacer()
@@ -114,9 +110,8 @@ struct HomePage: View {
             }
 
         }
-        .frame(width: .infinity, height: .infinity)
         .background(
-            LinearGradient(colors: backgroundColors,
+            LinearGradient(colors: backgroundColors(isLight: isLight),
                            startPoint: .bottom,
                            endPoint: .top)
         )

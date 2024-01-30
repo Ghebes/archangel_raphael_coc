@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		494057F42B688DE100DAFBE7 /* BroadcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494057F32B688DE000DAFBE7 /* BroadcastView.swift */; };
+		494057F62B688E6300DAFBE7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494057F52B688E6300DAFBE7 /* Functions.swift */; };
 		49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */; };
 		49B661CF2B5F523D00C161FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B661CE2B5F523D00C161FF /* Assets.xcassets */; };
 		49B661D22B5F523D00C161FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B661D12B5F523D00C161FF /* Preview Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		494057F32B688DE000DAFBE7 /* BroadcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastView.swift; sourceTree = "<group>"; };
+		494057F52B688E6300DAFBE7 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		49B661C72B5F523C00C161FF /* Archangel Raphael.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Archangel Raphael.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archangel_RaphaelApp.swift; sourceTree = "<group>"; };
 		49B661CE2B5F523D00C161FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		494057F22B688D9C00DAFBE7 /* Broadcast */ = {
 			isa = PBXGroup;
 			children = (
+				494057F32B688DE000DAFBE7 /* BroadcastView.swift */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				49B661CE2B5F523D00C161FF /* Assets.xcassets */,
 				49B661D02B5F523D00C161FF /* Preview Content */,
 				49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */,
+				494057F52B688E6300DAFBE7 /* Functions.swift */,
 			);
 			path = "Archangel Raphael";
 			sourceTree = "<group>";
@@ -204,8 +210,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494057F42B688DE100DAFBE7 /* BroadcastView.swift in Sources */,
 				49B661EF2B61E89600C161FF /* HomeButton.swift in Sources */,
 				49B661ED2B61E07B00C161FF /* BibleVerses.swift in Sources */,
+				494057F62B688E6300DAFBE7 /* Functions.swift in Sources */,
 				49B661F22B62E24700C161FF /* TabNavigation.swift in Sources */,
 				49B661D92B60758F00C161FF /* HomePage.swift in Sources */,
 				49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */,
