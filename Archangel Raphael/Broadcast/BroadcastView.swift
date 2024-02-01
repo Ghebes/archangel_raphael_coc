@@ -11,7 +11,7 @@ struct BroadcastView: View {
     ///Environment Variable that opens url links
     @Environment(\.openURL) var openURL
     @Environment(\.dismiss) var dismiss: DismissAction
-    @AppStorage("isLight") var isLight: Bool = true
+    @AppStorage("isLight") var isLight: Bool = false
     
     @StateObject var navigationValues : NavigationValues = NavigationValues()
     
@@ -44,6 +44,7 @@ struct BroadcastView: View {
                     Spacer()
                     
                     ZStack{
+                        VideoView(videoID: "live_stream?channel=UCmr3L3Wzc1SqhLVM4qEONbQ")
                         
                         Image(systemName: "play.circle")
                             .resizable()

@@ -17,6 +17,8 @@
 		49B661EF2B61E89600C161FF /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661EE2B61E89600C161FF /* HomeButton.swift */; };
 		49B661F22B62E24700C161FF /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B661F12B62E24700C161FF /* TabNavigation.swift */; };
 		49C686F22B69B2FE0060A09A /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C686F12B69B2FE0060A09A /* AppNavigation.swift */; };
+		49C686F42B6C4AEE0060A09A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C686F32B6C4AEE0060A09A /* VideoView.swift */; };
+		49C686FE2B6C4DCF0060A09A /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C686FD2B6C4DCF0060A09A /* Feedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		49B661EE2B61E89600C161FF /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
 		49B661F12B62E24700C161FF /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
 		49C686F12B69B2FE0060A09A /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		49C686F32B6C4AEE0060A09A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		49C686FD2B6C4DCF0060A09A /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				494057F32B688DE000DAFBE7 /* BroadcastView.swift */,
+				49C686F32B6C4AEE0060A09A /* VideoView.swift */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -88,6 +93,14 @@
 		49B661C92B5F523C00C161FF /* Archangel Raphael */ = {
 			isa = PBXGroup;
 			children = (
+				49C686FC2B6C4D8C0060A09A /* Helper and Utils */,
+				49C686FB2B6C4D750060A09A /* Settings */,
+				49C686FA2B6C4D6B0060A09A /* Confession */,
+				49C686F92B6C4D5B0060A09A /* Feedback */,
+				49C686F82B6C4D560060A09A /* About */,
+				49C686F72B6C4D520060A09A /* Donations */,
+				49C686F62B6C4D4A0060A09A /* Bible Study */,
+				49C686F52B6C4CEB0060A09A /* Calendar */,
 				49B661DA2B6077C800C161FF /* Fonts */,
 				494057F22B688D9C00DAFBE7 /* Broadcast */,
 				49B661F02B61ECAA00C161FF /* Home and Tab */,
@@ -95,7 +108,6 @@
 				49B661CE2B5F523D00C161FF /* Assets.xcassets */,
 				49B661D02B5F523D00C161FF /* Preview Content */,
 				49B661CA2B5F523C00C161FF /* Archangel_RaphaelApp.swift */,
-				494057F52B688E6300DAFBE7 /* Functions.swift */,
 			);
 			path = "Archangel Raphael";
 			sourceTree = "<group>";
@@ -141,6 +153,64 @@
 				49C686F12B69B2FE0060A09A /* AppNavigation.swift */,
 			);
 			path = "Home and Tab";
+			sourceTree = "<group>";
+		};
+		49C686F52B6C4CEB0060A09A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		49C686F62B6C4D4A0060A09A /* Bible Study */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Bible Study";
+			sourceTree = "<group>";
+		};
+		49C686F72B6C4D520060A09A /* Donations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Donations;
+			sourceTree = "<group>";
+		};
+		49C686F82B6C4D560060A09A /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		49C686F92B6C4D5B0060A09A /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				49C686FD2B6C4DCF0060A09A /* Feedback.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		49C686FA2B6C4D6B0060A09A /* Confession */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Confession;
+			sourceTree = "<group>";
+		};
+		49C686FB2B6C4D750060A09A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		49C686FC2B6C4D8C0060A09A /* Helper and Utils */ = {
+			isa = PBXGroup;
+			children = (
+				494057F52B688E6300DAFBE7 /* Functions.swift */,
+			);
+			path = "Helper and Utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,10 +285,12 @@
 			files = (
 				494057F42B688DE100DAFBE7 /* BroadcastView.swift in Sources */,
 				49B661EF2B61E89600C161FF /* HomeButton.swift in Sources */,
+				49C686FE2B6C4DCF0060A09A /* Feedback.swift in Sources */,
 				49B661ED2B61E07B00C161FF /* BibleVerses.swift in Sources */,
 				494057F62B688E6300DAFBE7 /* Functions.swift in Sources */,
 				49B661F22B62E24700C161FF /* TabNavigation.swift in Sources */,
 				49B661D92B60758F00C161FF /* HomePage.swift in Sources */,
+				49C686F42B6C4AEE0060A09A /* VideoView.swift in Sources */,
 				49B661CB2B5F523C00C161FF /* Archangel_RaphaelApp.swift in Sources */,
 				49C686F22B69B2FE0060A09A /* AppNavigation.swift in Sources */,
 			);
