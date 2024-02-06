@@ -44,7 +44,7 @@ struct TabNavigation: View {
                 case .about:
                     Text("About")
                 case .feedback:
-                    Text("Feedback")
+                    Feedback()
                 case .confession:
                     Text("Confession")
                 case .settings:

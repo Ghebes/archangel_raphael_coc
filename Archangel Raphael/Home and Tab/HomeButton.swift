@@ -43,7 +43,7 @@ struct HomeButton: View {
                 
         }
         .frame(width: size, height: size)
-        .background(isLight ? .whiteBlue : .mediumGray)
+        .background(isLight ? .whiteblue : .mediumGray)
         .cornerRadius(20)
         .shadow(radius: 20)
 

@@ -13,7 +13,24 @@ struct Feedback: View {
     ///Variable that determines the number of stars tapped for the feedback rating
     @State var numberOfStars: Double = 0.0
     
+    ///Variable that holds the information for the email textfield
+    @State var emailField: String = ""
+    
+    ///Variable that holds the information for the required message textfield
+    @State var messageField: String = "(Required) What suggestions, constructive criticism, or positive feedback do you have regarding the application? Do you have any questions about the function of the application?"
+    
+    ///Variable that determines whether enough required information is entered
+    @State var requirementsFailed: Bool = false
+    
+    var startingMessage = "(Required) What suggestions, constructive criticism, or positive feedback do you have regarding the application? Do you have any questions about the function of the application?"
     @State var eachTapped : [Int] = [0,0,0,0,0]
+    
+    
+    //To get rid of the background from TextEditor
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         GeometryReader{ proxy in
             VStack(spacing: 0){
@@ -37,7 +54,8 @@ struct Feedback: View {
                 .padding(.top, proxy.size.height * 20 / 839)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(isLight ? .textGray : .coral)
-                .font(.custom("Literata-Medium", size: 16))
+                .font(.custom("Literata-Medium", size: 14))
+                
                 
                 HStack{
                     Spacer()
@@ -56,6 +74,11 @@ struct Feedback: View {
                                         numberOfStars = Double(index + 1)
                                     }
                                     
+                                    for element in eachTapped.indices{
+                                        if(element < index){
+                                            eachTapped[element] = 0
+                                        }
+                                    }
                                 }
                             
                         }
@@ -63,9 +86,76 @@ struct Feedback: View {
                     }
                     .shadow(radius: 1)
                     Spacer()
-                    
                 }
-                .padding(.top, proxy.size.height * 32 / 839)
+                .padding(.top, proxy.size.height * 22 / 839)
+                
+                HStack{
+                    Spacer()
+                    HStack{
+                        TextField("(Optional) Enter your email...", text: $emailField)
+                            .padding(.leading, 10)
+                            .autocorrectionDisabled()
+                    }
+                    .frame(width: proxy.size.width * 372/430, height: proxy.size.height * 60/839, alignment: .leading)
+                    .background(.whiteblue)
+                    .cornerRadius(20)
+                    .shadow(radius: 4)
+                    .foregroundStyle(.lightTextGray)
+                    .font(.custom("Literata-Medium", size: 16))
+                    
+                    Spacer()
+                }
+                .padding(.top, proxy.size.height * 30 / 839)
+                
+                HStack{
+                    Spacer()
+                    TextEditor(text: $messageField)
+                        .frame(width: proxy.size.width * 372/430, height: proxy.size.height * 326/839, alignment: .topLeading)
+                        .textEditorBackground(Color("whiteblue"))
+                        .cornerRadius(20)
+                        .shadow(radius: 4)
+                        .textInputAutocapitalization(.sentences)
+                        .foregroundStyle(.lightTextGray)
+                        .font(.custom("Literata-Medium", size: 12))
+                        .onTapGesture{
+                            if(messageField == startingMessage){
+                                messageField = ""
+                            }
+                        }
+                    
+                    
+                    
+                    Spacer()
+                }
+                .padding(.top, proxy.size.height * 22 / 839)
+                
+                HStack{
+                    Spacer()
+                    Button{
+                        //number of stars has the rating of the user
+                        if(messageField != "" && messageField != startingMessage){
+                            guard let url = createEmailUrl(to: "codingghebs@gmail.com", subject: "Feedback", body: messageField, type: "gmail") else {
+                                print("error")
+                                return
+                            }
+                            UIApplication.shared.open(url)
+                        }else{
+                            requirementsFailed = true
+                        }
+                        
+                    }label:{
+                        Text("Send Feedback")
+                            .frame(width: proxy.size.width * 172 / 430, height: proxy.size.height * 20 / 430)
+                            .background(.whiteblue)
+                            .foregroundStyle(.churchOrange)
+                            .cornerRadius(20)
+                            .shadow(radius: 4)
+                            .font(.custom("Literata-Bold", size: 16))
+                        
+                    }
+                    Spacer()
+                }
+                .padding(.top, proxy.size.height * 20/839)
             }
             
         }
@@ -74,6 +164,25 @@ struct Feedback: View {
                            startPoint: .bottom,
                            endPoint: .top)
         )
+        .onTapGesture{
+            if(messageField == ""){
+                messageField = startingMessage
+            }
+        }
+        
+        /*.alert("Missing Information", isPresented: $requirementsFailed,
+               actions: {
+            Button(role: .cancel){
+                requirementsFailed = false
+            }label: {
+                Text("Ok")
+            }
+        }
+               , message : {
+            Text("You have not filled out the required message information.")
+        }
+        )
+         */
     }
 }
 
