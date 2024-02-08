@@ -168,9 +168,7 @@ struct Feedback: View {
             if(messageField == ""){
                 messageField = startingMessage
             }
-        }
-        
-        /*.alert("Missing Information", isPresented: $requirementsFailed,
+        }.alert("Missing Information", isPresented: $requirementsFailed,
                actions: {
             Button(role: .cancel){
                 requirementsFailed = false
@@ -182,7 +180,7 @@ struct Feedback: View {
             Text("You have not filled out the required message information.")
         }
         )
-         */
+         
     }
 }
 

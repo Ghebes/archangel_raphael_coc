@@ -48,7 +48,7 @@ struct TabNavigation: View {
                 case .confession:
                     Text("Confession")
                 case .settings:
-                    Text("Settings")
+                    Settings()
                 }
                 
                 GeometryReader{proxy in

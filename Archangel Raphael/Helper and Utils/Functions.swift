@@ -49,3 +49,12 @@ public func createEmailUrl(to: String, subject: String, body: String, type: Stri
     
     return defaultUrl
 }
+
+
+///Prefixing a Binding Variable to allow for negation
+prefix func ! (value: Binding<Bool>) -> Binding<Bool> {
+    Binding<Bool>(
+        get: { !value.wrappedValue },
+        set: { value.wrappedValue = !$0 }
+    )
+}
